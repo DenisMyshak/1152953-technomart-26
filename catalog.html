@@ -11,9 +11,18 @@
 				<img src="img/catalog-img/header-images/header-logo/technomart-logo.svg" width="220" height="50" alt="Техномарт">
 			</a>
 			<ul class="user-actions-list">
-				<li class="user-actions-item">Поиск:</li>
-				<li class="user-actions-item">Закладки:0</li>
-				<li class="user-actions-item">Корзина:10</li>
+				<li class="user-actions-item">
+					<form class="search-form">
+						<label for="search-field">Поиск:</label>
+							<input type="search" name="search" id="search-field">
+					</form>
+				</li>
+				<li class="user-actions-item">
+					<button type="button">Закладки:0</button>
+				</li>
+				<li class="user-actions-item">
+					<button type="button">Корзина:0</button>
+				</li>
 			</ul>
 			<button type="button" class="main-header-checkout_btn">Оформить заказ</button>
 		</div>
@@ -59,28 +68,67 @@
 	</header>
 	<main class="catalog-content">
 		<ul class="breadcrumbs">
-			<li class="breadcrumbs-item"><a href="index.html"><img src="img/catalog-img/content-images/bread-crumbs-nav-img/icon-home.svg" width="14" height="12" alt="На главную"></a></li>
+			<li class="breadcrumbs-item">
+				<a href="index.html">
+					<img src="img/catalog-img/content-images/bread-crumbs-nav-img/icon-home.svg" width="14" height="12" alt="На главную">
+				</a>
+			</li>
 			<li class="breadcrumbs-item"><a href="#">Каталог</a></li>
 			<li class="breadcrumbs-item"><a href="#">Инструменты</a></li>
 			<li class="breadcrumbs-item"><a href="#">Перфораторы</a></li>
 		</ul>
 		<h1>Перфораторы</h1>
 		<section class="filtrs-block">
-			<h2>Фильтр:</h2><!-- Этот заголовок скроется -->
-			<!-- Здесь будет форма -->
-			<h2>Производители:</h2>
-			<ul class="manufacturers-list">
-				<!-- Список производителей -->
-			</ul>
-			<h2>Питание:</h2>
-			<ul class="acumulater-type-list">
-				<!-- Список типов аккомуляторов -->
-			</ul>
-			<button type="button">Показать</button>
+			<form oninput="pricenumber.value=pricerange.value">
+				<legend>Фильтр:</legend>
+					<div class="price-filter-wrapper">
+						<label for="pricerange">Цена</label>
+							<input type="range" name="price" id="pricerange" min="0" max="30000">
+						<div class="output-wrapper">
+							<output name="pricenumber-min">0</output>
+							<output name="pricenumber">20000</output>
+						</div>
+					</div>
+					<h2>Производители:</h2>
+						<ul class="manufacturers-list">
+							<li>
+								<input type="checkbox" name="firm-1" id="firm-1-check" checked>
+									<label for="firm-1-check">BOSCH</label>
+							</li>
+							<li>
+								<input type="checkbox" name="firm-2" id="firm-2-check">
+									<label for="firm-2-check">ИНТЕРСКОЛ</label>
+							</li>
+							<li>
+								<input type="checkbox" name="firm-3" id="firm-3-check" checked>
+									<label for="firm-3-check">MAKITA</label>
+							</li>
+							<li>
+								<input type="checkbox" name="firm-4" id="firm-4-check">
+									<label for="firm-4-check">Dewalt</label>
+							</li>
+							<li>
+								<input type="checkbox" name="firm-5" id="firm-5-check">
+									<label for="firm-5-check">Hitachi</label>
+							</li>
+						</ul>
+					<h2>Питание:</h2>
+						<ul class="acumulater-type-list">
+							<li>
+								<input type="radio" name="power" id="accumulate-radio" value="Аккумуляторные" checked>
+									<label for="accumulate-radio">Аккумуляторные</label>
+							</li>
+							<li>
+								<input type="radio" name="power" id="mainspower-radio" value="Сетевое">
+									<label for="mainspower-radio">Аккумуляторные</label>
+							</li>
+						</ul>
+					<button type="button">Показать</button>
+			</form>
 		</section>
 
 		<section class="catalog-block">
-			<h2>Каталог товаров:</h2> <!-- Этот заголовок скроется -->
+			<h2 class="visually-hidden">Каталог товаров:</h2> <!-- Этот заголовок скроется -->
 			<ul class="catalog-list">
 				<li>
 					<section class="shop-card">
@@ -328,9 +376,9 @@
 				</li>
 			</ul>
 			<ul class="paggination-list">
-				<li class="paggination-item-active">1</li>
-				<li>2</li>
-				<li>3</li>
+				<li class="paggination-item-active" tabindex="0">1</li>
+				<li tabindex="0">2</li>
+				<li tabindex="0">3</li>
 				<li><button type="button">Следующая</button></li>
 			</ul>
 		</section>
@@ -407,5 +455,20 @@
 			</ul>
 		</div>
 	</footer>
+
+	<section class="product-added-card"> <!-- Попап при добавленном товаре -->
+		<h2 class="visually-hidden">Корзина: товар</h2>
+		<button type="button">
+			<img src="img/catalog-img/content-images/catalog/decorative-icons/close-btn.svg">
+		</button>
+		<div>
+			<img src="img/catalog-img/content-images/catalog/decorative-icons/add.svg">
+			<p>Товар добавлен в корзину!</p>
+		</div>
+		<div class="form-user-actions-wrapper">
+			<a href="#">Оформить заказ</a>
+			<button type="button">Продожить покупки</button>
+		</div>
+	</section>
 </body>
 </html>

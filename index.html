@@ -11,9 +11,18 @@
 				<img src="img/index-img/header-images/header-logo/technomart-logo.svg" width="220" height="50" alt="Техномарт">
 			</a>
 			<ul class="user-actions-list">
-				<li class="user-actions-item">Поиск:</li>
-				<li class="user-actions-item">Закладки:0</li>
-				<li class="user-actions-item">Корзина:0</li>
+				<li class="user-actions-item">
+					<form class="search-form">
+						<label for="search-field">Поиск:</label>
+							<input type="search" name="search" id="search-field">
+					</form>
+				</li>
+				<li class="user-actions-item">
+					<button type="button">Закладки:0</button>
+				</li>
+				<li class="user-actions-item">
+					<button type="button">Корзина:0</button>
+				</li>
 			</ul>
 			<button type="button" class="main-header-checkout_btn">Оформить заказ</button>
 		</div>
@@ -185,9 +194,9 @@
 			Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
 			<div class="sevice-list-wrapper">
 				<ul class="sevices-list">
-					<li class="services-item-active">Доставка</li>
-					<li>Гарантия</li>
-					<li>Кредит</li>
+					<li class="services-item-active" tabindex="0">Доставка</li>
+					<li tabindex="0">Гарантия</li>
+					<li tabindex="0">Кредит</li>
 				</ul>
 				<div class="service-description-wrapper">
 					<dl class="services-description">
@@ -222,7 +231,7 @@
 				<p>Вы можете забрать товар сами, 
 				заехав в наш офис:</p>
 				<figure>
-					<img src="img/index-img/content-images/service-images/map-img.png">
+					<img src="img/index-img/content-images/service-images/map-img.png" class="mini-map-img" tabindex="0">
 				</figure>
 				<a href="#">Заблудились? Напишите нам!</a>
 			</div>
@@ -292,6 +301,29 @@
 		</div>
 	</footer>
     <!-- <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p> -->
-
+	
+	<section class="big-map"> <!-- Попап с картой -->
+		<button type="button"><img src="img/index-img/content-images/service-images/close-btn.svg"></button>
+		<img src="img/index-img/content-images/service-images/big-map.png">
+	</section>
+	<br>
+	<section class="write-box"> <!-- Попап с формой -->
+		<button type="button"><img src="img/index-img/content-images/service-images/close-btn.svg"></button>
+		<form class="write-form">
+			<div class="name-email-wrapper">
+				<label for="nameUser-field">Ваше имя:</label>
+					<input type="text" name="nameUser" id="nameUser-field" placeholder="Имя Фамилия">
+				<label for="email-field">Ваш e-mail:</label>
+					<input type="email" name="email" id="email-field" placeholder="email@example.com">
+			</div>
+			<label for="text-User-field">Текст письма:</label><br>
+				<textarea name="text-User" id="text-User-field" rows="7">
+					В свободной форме
+				</textarea>
+			<div class="sub-wrapper">
+				<input type="submit" name="sub" id="sub-btn" value="Отправить">
+			</div>
+		</form>
+	</section>
   </body>
 </html>
