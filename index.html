@@ -37,18 +37,18 @@
 					</li>
 
 					<li class="user-actions-item">
-						<button type="button" class="header-btn">Закладки:0</button>
+						<button type="button" class="header-btn bookmark">Закладки: 0</button>
 					</li>
 
 					<li class="user-actions-item">
-						<button type="button" class="header-btn">Корзина:0</button>
+						<button type="button" class="header-btn basket">Корзина: 0</button>
 					</li>
 
 					<li>
 						<button type="button" class="main-header-checkout_btn">
 							Оформить заказ
 						</button>
-					</li>	
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -98,17 +98,17 @@
 			<h2 class="visually-hidden">Каталог</h2> <!-- Заголовок скоется -->
 
 			<div class="flex-wrapper-top">
-				<section class="materials new">
+				<section class="materials new flex-top-item">
 					<h2>Материалы</h2>
 					<a href="#">На любой вкус</a>
 				</section>
 
-				<section class="instruments">
+				<section class="instruments flex-top-item">
 					<h2>Инструменты</h2>
 					<a href="#">На все случаи</a>
 				</section>
 
-				<section class="technics">
+				<section class="technics flex-top-item">
 					<h2>Техника</h2>
 					<a href="#">Для стройки</a>
 				</section>
@@ -116,19 +116,52 @@
 
 			<div class="flex-wrapper-bottom">
 				<section class="slaider">
-					<h2 class="slaider-headering">Дрели</h2>
+					<div class="slaide-1 slaids">
+						<h2 class="slaider-headering">Перфораторы</h2>
 
-					<p>Соседям на радость!</p>
-					<a href="catalog.html">Открыть каталог</a>
+						<p>Настоящие мужские игрушки</p>
+						<a href="catalog.html">Открыть каталог</a>
+
+						<button type="button" class="slaider-btn back-btn">
+							<div>
+								<span class="visually-hidden">Назад</span>
+							</div>
+						</button>
+
+						<button type="button" class="slaider-btn next-btn">
+							<div>
+								<span class="visually-hidden">Вперед</span>
+							</div>
+						</button>
+					</div>
+
+					<div class="slaide-2 slaids slaide-hidden">
+						<h2 class="slaider-headering">Дрели</h2>
+
+						<p>Соседям на радость!</p>
+						<a href="catalog.html">Открыть каталог</a>
+
+						<button type="button" class="slaider-btn back-btn">
+							<div>
+								<span class="visually-hidden">Назад</span>
+							</div>
+						</button>
+
+						<button type="button" class="slaider-btn next-btn">
+							<div>
+								<span class="visually-hidden">Вперед</span>
+							</div>
+						</button>
+					</div>
 				</section>
 
 				<div class="additive-flex-part">
-					<section class="discounts">
+					<section class="discounts flex-bottom-item">
 						<h2>Скидки</h2>
 						<a href="#">На 350 товаров</a>
 					</section>
 
-					<section class="delivery">
+					<section class="delivery flex-bottom-item">
 						<h2>Доставка</h2>
 						<a href="#">Бесплатно</a>
 					</section>
@@ -246,7 +279,7 @@
 							<a href="#">BFG 2000</a>
 						</h3>
 
-						<div class="price">
+						<div class="stock-price">
 							<span>12500 P.</span>
 						</div>
 				</li>
@@ -321,19 +354,49 @@
 				Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
 
 				<div class="sevice-list-wrapper">
+					<img src="img/index-img/content-images/service-images/shadow.png" class="shadow">
 					<ul class="sevices-list">
-						<li class="services-item-active" tabindex="0">Доставка</li>
-						<li tabindex="0">Гарантия</li>
-						<li tabindex="0">Кредит</li>
+						<li>
+							<a href="#" class="services-item-active services-list-delivery">Доставка</a>
+						</li>
+						<li>
+							<a href="#" class="services-list-garanty">Гарантия</a>
+						</li>
+						<li>
+							<a href="#"  class="services-list-credit">Кредит</a>
+						</li>
 					</ul>
 
-					<div class="service-description-wrapper">
+					<div class="service-description-wrapper  delivery-desc">
 						<dl class="services-description">
 							<dt>Доставка</dt>
 							<dd>Мы с удовольствием доставим ваш товар прямо<br> 
 							к вашему подъезду совершенно бесплатно!<br>
 							Ведь мы неплохо заработаем,<br> 
-							поднимая его на ваш этаж!</dd>
+							поднимая его на ваш этаж!<br>
+						</dd>
+						</dl>
+					</div>
+
+					<div class="service-description-wrapper garanty block-hidden">
+						<dl class="services-description">
+							<dt>Гарантия</dt>
+							<dd>Если купленный у нас товар поломается или заискрит,<br> 
+							а также в случае пожара, спровоцированного его возгоранием,<br>  
+							вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br>
+							сгоревший товар на новый.<br> 
+							Дом уж восстановите как-нибудь сами.<br>
+						</dd>
+						</dl>
+					</div>
+
+					<div class="service-description-wrapper credit block-hidden">
+						<dl class="services-description">
+							<dt>Кредит</dt>
+							<dd>Залезть в долговую яму стало проще!<br> 
+							Кредитные консультанты придут вам на помощь
+							</dd>
+							<a href="#" class="send-request-btn">Отправить заявку</a>
 						</dl>
 					</div>
 				</div>
@@ -347,7 +410,8 @@
 				<div class="company-advanteges">
 					<h2>Компания «Техномарт»</h2>
 
-					<p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и<br> строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
+					<p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и<br> строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
+					</p>
 
 					<p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
 					Техномарт работает со многими транспортными компаниями: </p>
@@ -371,7 +435,7 @@
 						<img src="img/index-img/content-images/service-images/map-img.png" class="mini-map-img" width="300" height="158" tabindex="0" alt="Карта">
 					</figure>
 
-					<a href="#">Заблудились? Напишите нам!</a>
+					<a href="#" class="write-us-btn">Заблудились? Напишите нам!</a>
 				</div>
 		</div>
 		</section>
@@ -385,15 +449,7 @@
 				<div class="flex-footer-item">
 					<div class="logo-wrapper">
 						<a href="#" class="main-logo">
-							<img src="img/index-img/footer-images/footer-logo/technomart-logo-active.svg" width="220" height="50" alt="Техномарт" class="logo-active logo">
-						</a>
-
-						<a href="#" class="main-logo">
-							<img src="img/index-img/footer-images/footer-logo/technomart-logo-hover.svg" width="220" height="50" alt="Техномарт" class="logo-hover logo">
-						</a>
-
-						<a href="#" class="main-logo">
-							<img src="img/index-img/footer-images/footer-logo/technomart-logo.svg" width="220" height="50" alt="Техномарт" class="logo-link logo">
+							<img src="img/index-img/footer-images/footer-logo/technomart-logo.svg" width="220" height="68" alt="Техномарт">
 						</a>
 					</div>
 
@@ -425,7 +481,7 @@
 
 							<li class="footer-main-nav-item">
 								<a href="#">Контакты</a>
-							</li>
+							</li>	
 						</ul>
 					</nav>
 
@@ -495,30 +551,54 @@
 		</div>
 
 	</footer>
-    <!-- <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p> -->
 	
-	<section class="big-map"> <!-- Попап с картой -->
-		<button type="button"><img src="img/index-img/content-images/service-images/close-btn.svg"></button>
+	<section class="modal big-map"> <!-- Попап с картой -->
+		<button type="button" class="close-btn"><span class="visually-hidden">Закрыть</span></button>
 		<img src="img/index-img/content-images/service-images/big-map.png">
 	</section>
-	<br>
-	<section class="write-box"> <!-- Попап с формой -->
-		<button type="button"><img src="img/index-img/content-images/service-images/close-btn.svg"></button>
+
+	<section class="modal write-box"> <!-- Попап с формой -->
+		<button type="button" class="close-btn"></button>
+
 		<form class="write-form">
 			<div class="name-email-wrapper">
-				<label for="nameUser-field">Ваше имя:</label>
-					<input type="text" name="nameUser" id="nameUser-field" placeholder="Имя Фамилия">
-				<label for="email-field">Ваш e-mail:</label>
-					<input type="email" name="email" id="email-field" placeholder="email@example.com">
+				<div>
+				<label for="nameUser-field" class="label-field">Ваше имя:</label>
+					<input type="text" name="nameUser" id="nameUser-field" placeholder="Имя Фамилия" class="login-fields" required>
+				</div>
+
+				<div>
+				<label for="email-field" class="label-field">Ваш e-mail:</label>
+					<input type="email" name="email" id="email-field" placeholder="email@example.com" class="login-fields" required>
+				</div>
+
 			</div>
-			<label for="text-User-field">Текст письма:</label><br>
-				<textarea name="text-User" id="text-User-field" rows="7">
-					В свободной форме
-				</textarea>
+
+			<label for="text-User-field" class="label-field">Текст письма:</label>
+				<textarea name="text-User" id="text-User-field" class="message-area" placeholder="В свободной форме"></textarea>
+			</form>
+
 			<div class="sub-wrapper">
-				<input type="submit" name="sub" id="sub-btn" value="Отправить">
+				<button type="submit" name="sub" id="sub-btn" class="submit-btn">Отправить</button>
 			</div>
-		</form>
 	</section>
+
+	<section class="product-added-card modal popup-hidden"> <!-- Попап при добавленном товаре -->
+		<h2 class="visually-hidden">Корзина: товар</h2>
+		<button type="button" class="close-btn">
+			<span class="visually-hidden">Закрыть</span>
+		</button>
+		<div class="product-added-phrase">
+			<p>Товар добавлен в корзину!</p>
+		</div>
+		<div class="added-buttons-wrapper">
+			<a href="#" class="do-order-btn added-buttons">Оформить заказ</a>
+			<button type="button" class="continue-btn added-buttons">Продожить покупки</button>
+		</div>
+	</section>
+
+	<script type="text/javascript" src="js/scripts.js"></script>
+
+	<!-- <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p> -->
   </body>
 </html>

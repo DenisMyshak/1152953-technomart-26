@@ -37,11 +37,11 @@
 					</li>
 
 					<li class="user-actions-item">
-						<button type="button" class="header-btn">Закладки:0</button>
+						<button type="button" class="header-btn bookmark">Закладки:0</button>
 					</li>
 
 					<li class="user-actions-item">
-						<button type="button" class="header-btn">Корзина:0</button>
+						<button type="button" class="header-btn basket">Корзина:0</button>
 					</li>
 
 					<li>
@@ -69,9 +69,7 @@
 				<div class="user-profile">
 					<ul class="user-list">
 						<li class="user-list-item">
-							<a href="#">
-								<img src="img/catalog-img/header-images/decorative-icons/icon-user.svg" width="20" height="20" alt="User-icon">
-							</a>
+							<a href="#" class="user-icon"></a>
 						</li>
 
 						<li class="user-list-item">
@@ -79,9 +77,7 @@
 						</li>
 
 						<li class="user-list-item">
-							<a href="#">
-								<img src="img/catalog-img/header-images/decorative-icons/icon-logout.svg" width="20" height="20" alt="Деавторизация">
-							</a>
+							<a href="#" class="logout-icon"></a>
 						</li>
 					</ul>
 				</div>
@@ -143,7 +139,11 @@
 							<label class="filtr-labels">Цена:</label>
 
 							<div class="price-filtr-field">
-								<div class="price-filtr-range"></div>
+								<div class="price-filtr-range">
+									<div class="scale"></div>
+									<div class="slider-1 slider"></div>
+									<div class="slider-2 slider"></div>
+								</div>
 							</div>
 
 							<div class="price-inputs">
@@ -216,10 +216,35 @@
 			<section class="catalog-list-wrapper">
 				<h2 class="visually-hidden">Каталог товаров:</h2> 
 
+				<section class="sorting-block">
+					<h3>Сортировка:</h3>
+
+					<div>
+						<ul class="sorting-items-list">
+							<li class="sorting-item">
+								<span class="sorting-item-selected">По цене</span>
+							</li>
+							<li class="sorting-item">
+								<span>По типу</span>
+							</li>
+							<li class="sorting-item">
+								<span>По функционалу</span>
+							</li>
+						</ul>
+							
+						<div class="sorting-btn-wrapper">
+							<ul class="sorting-btn">
+								<li></li>
+								<li></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
 				<ul class="catalog-list">
 
 					<li class="catalog-card">
-						<div>
+						<div class="catalog-hover-block">
 							<img src="img/index-img/content-images/popular-products-images/Perforator_1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
 							<!-- При наведении -->
 							<ul class="user-btns">
@@ -249,7 +274,7 @@
 				</li>
 
 				<li class="catalog-card">
-					<div>
+					<div class="catalog-hover-block">
 						<img src="img/index-img/content-images/popular-products-images/Perforator_1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
 						<!-- При наведении -->
 						<ul class="user-btns">
@@ -279,7 +304,7 @@
 				</li>
 
 				<li class="catalog-card">
-					<div>
+					<div class="catalog-hover-block">
 						<img src="img/index-img/content-images/popular-products-images/Perforator_1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
 						<!-- При наведении -->
 						<ul class="user-btns">
@@ -309,7 +334,7 @@
 				</li>
 
 				<li class="catalog-card">
-					<div>
+					<div class="catalog-hover-block">
 						<img src="img/index-img/content-images/popular-products-images/Perforator_1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
 						<!-- При наведении -->
 						<ul class="user-btns">
@@ -339,7 +364,7 @@
 				</li>
 
 				<li class="catalog-card">
-					<div>
+					<div class="catalog-hover-block">
 						<img src="img/index-img/content-images/popular-products-images/Perforator_1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
 						<!-- При наведении -->
 						<ul class="user-btns">
@@ -369,7 +394,7 @@
 				</li>
 
 				<li class="catalog-card">
-					<div>
+					<div class="catalog-hover-block">
 						<img src="img/index-img/content-images/popular-products-images/Perforator_1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
 						<!-- При наведении -->
 						<ul class="user-btns">
@@ -399,7 +424,7 @@
 				</li>
 
 				<li class="catalog-card">
-					<div>
+					<div class="catalog-hover-block">
 						<img src="img/index-img/content-images/popular-products-images/Perforator_1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
 						<!-- При наведении -->
 						<ul class="user-btns">
@@ -429,7 +454,7 @@
 				</li>
 
 				<li class="catalog-card">
-					<div>
+					<div class="catalog-hover-block">
 						<img src="img/index-img/content-images/popular-products-images/Perforator_1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
 						<!-- При наведении -->
 						<ul class="user-btns">
@@ -459,7 +484,7 @@
 				</li>
 
 				<li class="catalog-card">
-					<div>
+					<div class="catalog-hover-block">
 						<img src="img/index-img/content-images/popular-products-images/Perforator_1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
 						<!-- При наведении -->
 						<ul class="user-btns">
@@ -519,15 +544,7 @@
 				<div class="flex-footer-item">
 					<div class="logo-wrapper">
 						<a href="#" class="main-logo">
-							<img src="img/index-img/footer-images/footer-logo/technomart-logo-active.svg" width="220" height="50" alt="Техномарт" class="logo-active logo">
-						</a>
-
-						<a href="#" class="main-logo">
-							<img src="img/index-img/footer-images/footer-logo/technomart-logo-hover.svg" width="220" height="50" alt="Техномарт" class="logo-hover logo">
-						</a>
-
-						<a href="#" class="main-logo">
-							<img src="img/index-img/footer-images/footer-logo/technomart-logo.svg" width="220" height="50" alt="Техномарт" class="logo-link logo">
+							<img src="img/catalog-img/footer-images/footer-logo/technomart-logo.svg" width="220" height="68" alt="Техномарт">
 						</a>
 					</div>
 
@@ -630,19 +647,20 @@
 
 	</footer>
 
-	<section class="product-added-card"> <!-- Попап при добавленном товаре -->
+	<section class="product-added-card modal popup-hidden"> <!-- Попап при добавленном товаре -->
 		<h2 class="visually-hidden">Корзина: товар</h2>
-		<button type="button">
-			<img src="img/catalog-img/content-images/catalog/decorative-icons/close-btn.svg">
+		<button type="button" class="close-btn">
+			<span class="visually-hidden">Закрыть</span>
 		</button>
-		<div>
-			<img src="img/catalog-img/content-images/catalog/decorative-icons/add.svg">
+		<div class="product-added-phrase">
 			<p>Товар добавлен в корзину!</p>
 		</div>
-		<div class="form-user-actions-wrapper">
-			<a href="#">Оформить заказ</a>
-			<button type="button">Продожить покупки</button>
+		<div class="added-buttons-wrapper">
+			<a href="#" class="do-order-btn added-buttons">Оформить заказ</a>
+			<button type="button" class="continue-btn added-buttons">Продожить покупки</button>
 		</div>
 	</section>
+
+	<script type="text/javascript" src="js/scripts-catalog.js"></script>
 </body>
 </html>
