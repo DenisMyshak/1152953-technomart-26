@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+   	<link rel="stylesheet" type="text/css" href="css/mini-css.css">
   </head>
   <body>
 	<header class="main-header">
@@ -57,11 +57,11 @@
 			<p class="short-market-desc">
 				Интернет-магазин<br>
 				строительных материалов<br>
-				и инструментов для ремонта
+				и инструментов для ремонта<br>
 			</p>
 
 			<div class="address-block">
-				<a href="tel:+7(812) 555-05-55">+7(812) 555-05-55</a>
+				<a href="tel:+7(812)555-05-55">+7(812) 555-05-55</a>
 				<address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
 			</div>
 
@@ -98,18 +98,18 @@
 			<h2 class="visually-hidden">Каталог</h2> <!-- Заголовок скоется -->
 
 			<div class="flex-wrapper-top">
-				<section class="materials new flex-top-item">
-					<h2>Материалы</h2>
+				<section class="materials new flex-top-item prewie-card">
+					<h3>Материалы</h3>
 					<a href="#">На любой вкус</a>
 				</section>
 
-				<section class="instruments flex-top-item">
-					<h2>Инструменты</h2>
+				<section class="instruments flex-top-item prewie-card">
+					<h3>Инструменты</h3>
 					<a href="#">На все случаи</a>
 				</section>
 
-				<section class="technics flex-top-item">
-					<h2>Техника</h2>
+				<section class="technics flex-top-item prewie-card">
+					<h3>Техника</h3>
 					<a href="#">Для стройки</a>
 				</section>
 			</div>
@@ -117,52 +117,54 @@
 			<div class="flex-wrapper-bottom">
 				<section class="slaider">
 					<div class="slaide-1 slaids">
-						<h2 class="slaider-headering">Перфораторы</h2>
+						<h2>Перфораторы</h2>
 
 						<p>Настоящие мужские игрушки</p>
 						<a href="catalog.html">Открыть каталог</a>
 
 						<button type="button" class="slaider-btn back-btn">
-							<div>
 								<span class="visually-hidden">Назад</span>
-							</div>
 						</button>
 
 						<button type="button" class="slaider-btn next-btn">
-							<div>
 								<span class="visually-hidden">Вперед</span>
-							</div>
 						</button>
+
+						<ul class="slaider-nav">
+							<li class="slaider-nav-active"></li>
+							<li></li>
+						</ul>
 					</div>
 
 					<div class="slaide-2 slaids slaide-hidden">
-						<h2 class="slaider-headering">Дрели</h2>
+						<h2>Дрели</h2>
 
 						<p>Соседям на радость!</p>
 						<a href="catalog.html">Открыть каталог</a>
 
 						<button type="button" class="slaider-btn back-btn">
-							<div>
 								<span class="visually-hidden">Назад</span>
-							</div>
 						</button>
 
 						<button type="button" class="slaider-btn next-btn">
-							<div>
 								<span class="visually-hidden">Вперед</span>
-							</div>
 						</button>
+
+						<ul class="slaider-nav">
+							<li></li>
+							<li class="slaider-nav-active"></li>
+						</ul>
 					</div>
 				</section>
 
 				<div class="additive-flex-part">
-					<section class="discounts flex-bottom-item">
-						<h2>Скидки</h2>
+					<section class="discounts flex-bottom-item prewie-card">
+						<h3>Скидки</h3>
 						<a href="#">На 350 товаров</a>
 					</section>
 
-					<section class="delivery flex-bottom-item">
-						<h2>Доставка</h2>
+					<section class="delivery flex-bottom-item prewie-card">
+						<h3>Доставка</h3>
 						<a href="#">Бесплатно</a>
 					</section>
 				</div>
@@ -178,7 +180,7 @@
 
 			<ul class="popular-products-list">
 				<li class="popular-list-item">
-					<div>
+					<div class="hover-block-wrapper">
 						<img src="img/index-img/content-images/popular-products-images/Perforator_1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
 						<!-- При наведении -->
 						<ul class="user-btns">
@@ -207,7 +209,7 @@
 				</li>
 
 				<li class="popular-list-item">
-					<div>
+					<div class="hover-block-wrapper">
 						<img src="img/index-img/content-images/popular-products-images/Perforator_2.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
 
 						<ul class="user-btns">
@@ -234,7 +236,7 @@
 						</div>
 				</li>
 				<li class="popular-list-item">
-					<div>
+					<div class="hover-block-wrapper">
 						<img src="img/index-img/content-images/popular-products-images/Perforator_3.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
 
 						<ul class="user-btns">
@@ -261,7 +263,7 @@
 						</div>
 				</li>
 				<li class="popular-list-item popular-list-item_new">
-					<div>
+					<div class="hover-block-wrapper">
 						<img src="img/index-img/content-images/popular-products-images/Perforator_4.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
 
 						<ul class="user-btns">
@@ -354,7 +356,7 @@
 				Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
 
 				<div class="sevice-list-wrapper">
-					<img src="img/index-img/content-images/service-images/shadow.png" class="shadow">
+					<img src="img/index-img/content-images/service-images/shadow.png" class="shadow" alt=" ">
 					<ul class="sevices-list">
 						<li>
 							<a href="#" class="services-item-active services-list-delivery">Доставка</a>
@@ -396,8 +398,8 @@
 							<dd>Залезть в долговую яму стало проще!<br> 
 							Кредитные консультанты придут вам на помощь
 							</dd>
-							<a href="#" class="send-request-btn">Отправить заявку</a>
 						</dl>
+						<a href="#" class="send-request-btn">Отправить заявку</a>
 					</div>
 				</div>
 			</div>
@@ -414,7 +416,7 @@
 					</p>
 
 					<p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
-					Техномарт работает со многими транспортными компаниями: </p>
+					Техномарт работает со многими транспортными компаниями:</p>
 
 					<ul class="company-list">
 						<li>Деловые линии</li>
@@ -432,10 +434,12 @@
 					заехав в наш офис:</p>
 
 					<figure>
-						<img src="img/index-img/content-images/service-images/map-img.png" class="mini-map-img" width="300" height="158" tabindex="0" alt="Карта">
+						<a href="alternative-map.html" class="map-link">
+							<img src="img/index-img/content-images/service-images/map-img.png" class="mini-map-img" width="300" height="158" alt="Большая Конюшенная ул., 19">
+						</a>
 					</figure>
 
-					<a href="#" class="write-us-btn">Заблудились? Напишите нам!</a>
+					<a href="writeus.html" class="write-us-btn">Заблудились? Напишите нам!</a>
 				</div>
 		</div>
 		</section>
@@ -455,7 +459,7 @@
 
 						<div>
 							<address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
-							<a href="tel:+7(812) 555-05-55">+7(812) 555-05-55</a>
+							<a href="tel:+7(812)555-05-55">+7(812) 555-05-55</a>
 						</div>
 				</div>
 
@@ -472,7 +476,7 @@
 							</li>
 
 							<li class="footer-main-nav-item">
-								<a href="#">Каталог</a>
+								<a href="catalog.html">Каталог</a>
 							</li>
 
 							<li class="footer-main-nav-item">
@@ -540,7 +544,7 @@
 
 					<li>
 						<p>Разработано:<br>
-							<a href="http://htmlacademy.ru">
+							<a href="https://htmlacademy.ru/intensive/htmlcss">
 								htmlacademy.ru
 							</a>
 						</p>
@@ -553,11 +557,16 @@
 	</footer>
 	
 	<section class="modal big-map"> <!-- Попап с картой -->
-		<button type="button" class="close-btn"><span class="visually-hidden">Закрыть</span></button>
-		<img src="img/index-img/content-images/service-images/big-map.png">
+		<h2 class="visually-hidden">Карта</h2>
+		<button type="button" class="close-btn">
+			<span class="visually-hidden">Закрыть</span>
+		</button>
+
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6499441912295!2d30.32314395775794!3d59.93795062772139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1571494737609!5m2!1sru!2sua" width="940" height="446" style="border:0;" allowfullscreen=""></iframe>
 	</section>
 
 	<section class="modal write-box"> <!-- Попап с формой -->
+		<h2 class="visually-hidden">Написать нам</h2>
 		<button type="button" class="close-btn"></button>
 
 		<form class="write-form">
@@ -569,7 +578,7 @@
 
 				<div>
 				<label for="email-field" class="label-field">Ваш e-mail:</label>
-					<input type="email" name="email" id="email-field" placeholder="email@example.com" class="login-fields" required>
+					<input type="email" name="email" id="email-field" class="login-fields" placeholder="email@example.com">
 				</div>
 
 			</div>
@@ -583,8 +592,8 @@
 			</div>
 	</section>
 
-	<section class="product-added-card modal popup-hidden"> <!-- Попап при добавленном товаре -->
-		<h2 class="visually-hidden">Корзина: товар</h2>
+	<section class="product-added-card modal"> <!-- Попап при добавленном товаре -->
+		<h2 class="visually-hidden">Добавлен товар</h2>
 		<button type="button" class="close-btn">
 			<span class="visually-hidden">Закрыть</span>
 		</button>
@@ -597,7 +606,7 @@
 		</div>
 	</section>
 
-	<script type="text/javascript" src="js/scripts.js"></script>
+	<script src="js/mini-scripts.js"></script>
 
 	<!-- <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p> -->
   </body>

@@ -1,5 +1,6 @@
 var loginBtn = document.querySelector('.write-us-btn');
 var popup = document.querySelector('.write-box');
+var linkAlternativeMap = document.querySelector(".map-link");
 
 var close = popup.querySelector('.close-btn');
 var login = popup.querySelector('[name="nameUser"]');
@@ -7,6 +8,10 @@ var login = popup.querySelector('[name="nameUser"]');
 var submit = popup.querySelector('.submit-btn');
 var email = popup.querySelector('[name="email"]');
 var rewiev = popup.querySelector('[name="text-User"]');
+
+linkAlternativeMap.addEventListener("click", function(evt) {
+	evt.preventDefault();
+});
 
 isStorageSupport = true;
 var storage = "";
@@ -39,11 +44,12 @@ close.addEventListener("click", function(evt) {
 	evt.preventDefault();
 
 	popup.classList.remove("modal-show");
+	popup.classList.remove("modal-error");
 })
 
 submit.addEventListener("click", function(evt) {
 	if (!login.value || !email.value) {
-		console.log('Форма на заполена');
+		popup.classList.add("modal-error");
 	} else {
 		localStorage.setItem("login", login.value);
 		localStorage.setItem("email", email.value);
@@ -53,8 +59,21 @@ submit.addEventListener("click", function(evt) {
 		localStorage.setItem("login", login.value);
 		localStorage.setItem("email", email.value);
 	}
+
 	evt.preventDefault();
-})
+});
+
+window.addEventListener("keydown", function(evt) {
+	if (evt.keyCode === 27) {
+		if (popup.classList.contains("modal-show")) {
+			evt.preventDefault();
+
+			popup.classList.remove("modal-show");
+			popup.classList.remove("modal-error");
+		}
+	}
+
+});
 
 var listDelivery = document.querySelector(".services-list-delivery");
 var listGaranty = document.querySelector(".services-list-garanty");
@@ -109,20 +128,28 @@ var continueBuy = document.querySelector(".continue-btn");
     evt.addEventListener('click', function (e) {
     	e.preventDefault();
 
-    	catalogPopup.classList.remove("popup-hidden");
+    	catalogPopup.classList.add("product-added-card-show");
     })
 });
 
 closeCardAdd.addEventListener("click", function (evt) {
 	evt.preventDefault();
 
-	catalogPopup.classList.add("popup-hidden");
+	catalogPopup.classList.remove("product-added-card-show");
+});
+
+window.addEventListener("keydown", function(evt) {
+	if (evt.keyCode === 27) {
+		if (catalogPopup.classList.contains("product-added-card-show")) {
+			catalogPopup.classList.remove("product-added-card-show");
+		}
+	}
 });
 
 continueBuy.addEventListener("click", function (evt) {
 	evt.preventDefault();
 
-	catalogPopup.classList.add("popup-hidden");
+	catalogPopup.classList.remove("product-added-card-show");
 });
 
 var nextBtnSlaider = document.querySelectorAll(".next-btn");
@@ -147,4 +174,39 @@ var slaideTwo = document.querySelector(".slaide-2");
     	slaideOne.classList.remove("slaide-hidden");
     	slaideTwo.classList.add("slaide-hidden");
     })
+});
+
+var mapPopup = document.querySelector(".big-map");
+var mapOpen = document.querySelector(".mini-map-img");
+var closeMap = mapPopup.querySelector(".close-btn");
+
+mapOpen.addEventListener("click", function(evt) {
+	mapPopup.classList.add("big-map-show");
+});
+
+
+linkAlternativeMap.addEventListener("keydown", function(evt) {
+	if (evt.keyCode === 13) {
+		if (mapPopup.classList.contains("big-map-show")) {
+			mapPopup = true;
+		} else {
+			mapPopup.classList.add("big-map-show");
+		}
+	}
+}); //- при нажатии на мини-карту с помощью Enter, открывалась большая карта
+
+closeMap.addEventListener("click", function(evt) {
+	evt.preventDefault();
+
+	mapPopup.classList.remove("big-map-show");
+});
+
+window.addEventListener("keydown", function(evt) {
+	if (evt.keyCode === 27) {
+		if (mapPopup.classList.contains("big-map-show")) {
+			evt.preventDefault();
+
+			mapPopup.classList.remove("big-map-show");
+		}
+	}
 });
