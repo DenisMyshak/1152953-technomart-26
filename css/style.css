@@ -282,7 +282,9 @@ button.changed-value-item:hover {
 	width: 270px;
 	height: 45px;
 
-	margin-bottom: 10px;
+	margin-bottom: 8px;
+	margin-top: 2px;
+	padding-left: 22px;
 
 	border: 2px solid #fff;
 
@@ -398,7 +400,8 @@ button.changed-value-item:hover {
 }
 
 .main-header-nav-item {
-	/*padding: 0 30px;*/
+	position: relative;
+	padding: 0 30px;
 }
 
 .main-header-nav-item a {
@@ -406,11 +409,12 @@ button.changed-value-item:hover {
 	justify-content: center;
 	align-items: center;
 
-	width: 124px;
 	height: 55px;
 
 	font-size: 17px;
 	color: #fff;
+
+	z-index: 1;
 }
 
 .main-header-nav-item a::before {
@@ -420,19 +424,23 @@ button.changed-value-item:hover {
 	top: 0;
 	left: 0;
 
-	z-index: -1;
 	width: 100%;
 	height: 100%;
 }
 
-.main-header-nav_list a:hover {
+.main-header-nav-item:hover {
 	background-color: #293449;
+	color: #fff;
 }
 
-.main-header-nav_list a:active {
+.main-header-nav-item:active {
 	background-color: #1d2739;
+}
+
+.main-header-nav-item:active a {
 	color: #a8abaf;
 }
+
 		/*End of Header*/
 
 		/*Main*/
@@ -459,7 +467,7 @@ button.changed-value-item:hover {
 	color: #fff;
 	font-size: 24px;
 
-	margin: 20px 22px 15px;
+	margin: 20px 22px 14px;
 	padding: 0;
 }
 
@@ -471,7 +479,7 @@ button.changed-value-item:hover {
 	width: 135px;
 	height: 38px;
 
-	margin: 0 22px 22px;
+	margin: 0 23px 22px;
 
 	border-radius: 2px;
 
@@ -810,7 +818,10 @@ button.changed-value-item:hover {
 }
 
 .slaider a {
-	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
 	position: absolute;
 	left: 25px;
 	bottom: 22px;
@@ -821,9 +832,8 @@ button.changed-value-item:hover {
 	background-color: #ee3643;
 	border-radius: 2px;
 	color: #fff;
-	font-size: 17px;
-	text-align: center;
-	line-height: 38px;
+	font-size: 14px;
+	text-transform: uppercase;
 }
 
 .slaider a:hover {
@@ -846,18 +856,21 @@ button.changed-value-item:hover {
 
 	background-color: #f9f5f0;
 	font-family: "CuprumRegular", "Arial", sans-serif;
+	min-height: 89px;
 }
 
 .link_heading-wrapper h2 {
+	margin-top: 28px;
+}
+
+.popular-products-heading {
 	width: 600px;
 	font-size: 30px;
 	font-weight: normal;
 	color: #32425c;
 	text-transform: uppercase;
 
-	margin-left: 30px;
-	margin-bottom: 28px;
-	margin-top: 28px;
+	margin-left: 28px;
 }
 
 .link_heading-wrapper a {
@@ -893,7 +906,7 @@ button.changed-value-item:hover {
 	    flex-wrap: wrap;
 
 	margin-top: 18px;
-	font-family: "PT Sans Bold", "Arial", sans-serif; 
+	font-family: "PT Sans", "Arial", sans-serif;
 }
 
 .hover-block-wrapper {
@@ -932,6 +945,15 @@ button.changed-value-item:hover {
 	display: none;
 }
 
+.user-btns-show {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0;
+	width: 100%;
+	height: 175px;
+}
+
 .popular-list-item:hover .user-btns {
 	display: flex;
 	flex-direction: column;
@@ -939,6 +961,19 @@ button.changed-value-item:hover {
 	margin: 0;
 	width: 100%;
 	height: 175px;
+}
+
+.popular-list-item:focus-within .user-btns {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0;
+	width: 100%;
+	height: 175px;
+}
+
+.popular-list-item:focus-within img {
+	display: none;
 }
 
 .popular-list-item:hover img {
@@ -1012,7 +1047,7 @@ button.changed-value-item:hover {
 .perforator-name {
 	margin: 0;
 	font-size: 18px;
-	margin-top: 8px;
+	margin-top: 10px;
 	padding: 0 20px;
 }
 
@@ -1031,7 +1066,7 @@ button.changed-value-item:hover {
 
 	margin: 0 auto 0;
 	
-	padding-left: 36px;
+	padding-left: 38px;
 	color: #a9a9a9;
 	text-decoration: line-through;
 }
@@ -1041,25 +1076,41 @@ button.changed-value-item:hover {
 	align-items: center;
 	position: relative;
 
-	width: 122px;
+	width: 117px;
 	height: 39px;
 
-	left: 42px;
+	left: 47px;
+	bottom: 2px;
 
 	font-size: 17px;
 
 	background-color: #ee3643;
 	color: #fff;
-	border-radius: 3px 0 0 3px;
 
-	padding-left: 36px;
+	padding-left: 32px;
+}
+
+/*Для странного отступа в EI11*/
+.stock-price::before { 
+	content: "";
+	position: absolute;
+	display: block;
+	left: -5px;
+	top: 0;
+
+	background-color: #ee3643;
+
+	width: 10px;
+	height: 100%;
+
+	border-radius: 3px 0 0 3px;
 }
 
 .no-discounts-item {
-	top: 40px;
+	top: 38px;
 }
 
-.stock-price::before {
+.stock-price::after {
 	content: "";
 	position: absolute;
 	display: block;
@@ -1094,7 +1145,7 @@ button.changed-value-item:hover {
 	-ms-flex-wrap: wrap;
 	    flex-wrap: wrap;
 
-	margin-top: 20px;
+	margin-top: 22px;
 	margin-bottom: 65px;
 }
 
@@ -1122,6 +1173,10 @@ button.changed-value-item:hover {
 	height: 145px;
 
 	border: 1px solid #e5e5e5;
+}
+
+.popular-companies-item a[href="http://www.interskol.ru/"] {
+	padding-bottom: 18px;
 }
 
 .popular-companies-item a:hover {
@@ -1177,12 +1232,28 @@ button.changed-value-item:hover {
 }
 
 .sevices-list {
+	position: relative;
 	margin-top: 55px;
 
 	font-size: 21px;
 	font-family: "CuprumRegular","Arial", sans-serif;
 
 	color: #fff;
+}
+
+.sevice-list-wrapper::before {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 230px;
+
+	width: 10px;
+	height: 100%;
+	z-index: 1;
+
+	background-image: url("../img/index-img/content-images/service-images/shadow.png");
+	background-repeat: no-repeat;
+	background-position: 0 12px;
 }
 
 .sevices-list a {
@@ -1192,7 +1263,7 @@ button.changed-value-item:hover {
 	width: 240px;
 	height: 62px;
 
-	padding-left: 22px;
+	padding-left: 24px;
 
 	background-color: #32425c;
 	color: #fff;
@@ -1272,7 +1343,7 @@ a.services-item-active {
 	color: #32425c;
 	text-transform: uppercase;
 
-	margin-top: 18px;
+	margin-top: 20px;
 	margin-bottom: 25px;
 }
 
@@ -1303,7 +1374,7 @@ a.services-item-active {
 	        justify-content: space-between;
 
 	width: 940px;
-	margin: 0 auto 86px;
+	margin: 0 auto 84px;
 	font-family: "CuprumRegular", "Arial", sans-serif;
 }
 
@@ -1315,6 +1386,8 @@ a.services-item-active {
 	font-size: 30px;
 	font-weight: normal;
 	text-transform: uppercase;
+	margin-top: 26px;
+	margin-bottom: 23px;
 }
 
 .company-advanteges p {
@@ -1330,7 +1403,7 @@ a.services-item-active {
 }
 
 .company-advanteges p:last-of-type {
-	margin-bottom: 20px;
+	margin-bottom: 22px;
 }
 
 .company-list {
@@ -1372,6 +1445,7 @@ a.services-item-active {
 
 	background-color: #ee3643;
 	color: #fff;
+	border-radius: 3px;
 
 	font-size: 14px;
 	text-transform: uppercase;
@@ -1379,6 +1453,10 @@ a.services-item-active {
 
 .company-advanteges a:hover {
 	background-color: #ca2c37;
+}
+
+.contacts h2 {
+	margin-bottom: 26px;
 }
 
 .contacts p {
@@ -1390,7 +1468,7 @@ a.services-item-active {
 
 .contacts figure {
 	position: relative;
-	margin: 35px 0; 
+	margin: 35px 0 34px; 
 }
 
 .map-link {
@@ -1398,17 +1476,18 @@ a.services-item-active {
 }
 
 .write-us-btn {
-	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 300px;
-	height: 40px;
+	height: 38px;
 
 	background-color: #ee3643;
 	color: #fff;
+	border-radius: 3px;
 
 	font-size: 14px;
 	text-transform: uppercase;
-	text-align: center;
-	line-height: 40px;
 }
 
 .write-us-btn:hover {
@@ -1427,6 +1506,13 @@ a.services-item-active {
 
 .main-footer .logo-wrapper {
 	margin-bottom: 28px;
+	height: 68px;
+}
+
+.main-logo {
+	display: block;
+
+	width: 220px;
 	height: 68px;
 }
 
@@ -1454,7 +1540,12 @@ a.services-item-active {
 
 .footer-top-part address {
 	font-style: normal;
-	line-height: 22px;
+	line-height: 24px;
+	padding-left: 5px;
+}
+
+.footer-tel {
+	padding-left: 4px;
 }
 
 .footer-navs-wrapper {
@@ -1471,7 +1562,7 @@ a.services-item-active {
 }
 
 .footer-main-nav {
-	margin-bottom: 25px;
+	margin-bottom: 28px;
 }
 
 .footer-main-nav-list {
@@ -1483,11 +1574,11 @@ a.services-item-active {
 	        justify-content: flex-end;
 	-ms-flex-wrap: wrap;
 	    flex-wrap: wrap;
-	width: 565px;
+	width: 600px;
 }
 
 .footer-main-nav-item {
-	margin-right: 60px;
+	margin-right: 58px;
 	margin-bottom: 10px;
 }
 
@@ -1538,7 +1629,7 @@ a.services-item-active {
 }
 
 .footer-additional-item {
-	margin-right: 60px;
+	margin-right: 58px;
 	margin-bottom: 10px;
 }
 
@@ -1909,7 +2000,7 @@ a.services-item-active {
 }
 
 .breadcrumbs-item {
-	margin-right: 16px;
+	margin-right: 20px;
 }
 
 .breadcrumbs-item:first-child{
@@ -1940,7 +2031,7 @@ a.services-item-active {
 .breadcrumbs-decor-arrow {
 	position: relative;
 
-	padding-right: 20px;
+	padding-right: 22px;
 }
 
 .breadcrumbs-decor-arrow::before {
@@ -1997,9 +2088,9 @@ a.services-item-active {
 
 .forms {
 	border-top: 1px solid #e5e5e5;
-	padding-top: 20px;
+	padding-top: 22px;
 
-	padding-bottom: 21px;
+	padding-bottom: 23px;
 }
 
 .filtrs-block .forms:first-of-type {
@@ -2017,12 +2108,13 @@ a.services-item-active {
 .filtr-labels {
 	display: block;
 
-	margin-bottom: 18px;
+	margin-bottom: 17px;
+	padding-left: 2px;
 
 	font-weight: bold;
 	font-size: 17px;
 	text-transform: uppercase;
-	font-family: "PT Sans Bold", "Arial", sans-serif;
+	font-family: "PT Sans", "Arial", sans-serif;
 }
 
 .price-filtr-field {
@@ -2125,10 +2217,11 @@ a.services-item-active {
 }
 
 .filtrs-form input[type="text"] {
+	padding-left: 46px; 
+	font-size: 17px;
+	font-family: "PT Sans", "Arial", sans-serif;
 	width: 95px;
 	height: 38px;
-
-	text-align: center;
 
 	background-color: #f7f3ec;
 	border-radius: 3px;
@@ -2138,6 +2231,7 @@ a.services-item-active {
 
 .filtrs-form input[type="text"]:last-child {
 	margin-right: 0;
+	padding-left: 28px;
 }
 
 .manufacturers-list li {
@@ -2156,13 +2250,16 @@ a.services-item-active {
 	height: 23px;
 
 	padding-left: 35px;
+
 	text-transform: uppercase;
+	font-size: 15px;
 }
 
 .firm-name::before {
 	content: "";
 	display: block;
 	position: absolute;
+	top: 0;
 
 	width: 27px;
 	height: 23px;
@@ -2170,6 +2267,7 @@ a.services-item-active {
 
 	background-image: url("../img/catalog-img/content-images/catalog/decorative-icons/checkbox-off.svg");
 	background-repeat: no-repeat;
+	background-position: cover;
 }
 
 input[type="checkbox"]:checked + .firm-name::before {
@@ -2216,12 +2314,14 @@ input[type="checkbox"]:disabled + .firm-name::before {
 	padding-left: 35px;
 
 	text-transform: uppercase;
+	font-size: 15px;
 }
 
 .radio-label::before {
 	content: "";
 	display: block;
 	position: absolute;
+	top: 0;
 	left: 0;
 
 	width: 25px;
@@ -2256,9 +2356,11 @@ input[type="radio"]:disabled + .radio-label::before {
 	width: 140px;
 	height: 38px;
 
+	font-size: 13px;
 	border: 1px solid #e5e5e5;
 	background-color: #fff;
 	color: #000;
+	text-transform: uppercase;
 }
 
 .catalog-heading {
@@ -2308,7 +2410,7 @@ input[type="radio"]:disabled + .radio-label::before {
 
 	font-family: "PT Sans", "Arial", sans-serif;
 
-	min-height: 38px;
+	height: 38px;
 }
 
 .sorting-items-wrapper {
@@ -2423,9 +2525,9 @@ a.sorting-item-selected {
 	-ms-flex-wrap: wrap;
 	    flex-wrap: wrap;
 
-	margin-bottom: 34px;
+	margin-bottom: 30px;
 
-	font-family: "PT Sans Bold", "Arial", sans-serif;
+	font-family: "PT Sans", "Arial", sans-serif;
 }
 
 .catalog-card {
@@ -2458,6 +2560,10 @@ a.sorting-item-selected {
 	width: 100%;
 }
 
+.img-none {
+	display: none;
+}
+
 .catalog-card:hover .user-btns {
 	display: flex;
 	flex-direction: column;
@@ -2468,6 +2574,19 @@ a.sorting-item-selected {
 }
 
 .catalog-card:hover img {
+	display: none;
+}
+
+.catalog-card:focus-within .user-btns {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0;
+	width: 100%;
+	height: 175px;
+}
+
+.catalog-card:focus-within img {
 	display: none;
 }
 
@@ -2561,8 +2680,8 @@ a.sorting-item-selected {
 	width: 940px;
 	margin: 0 auto;
 
-	padding-top: 68px;
-	padding-bottom: 72px;
+	padding-top: 64px;
+	padding-bottom: 67px;
 }
 
 .about-hammer-drills-content dt {
@@ -2571,7 +2690,8 @@ a.sorting-item-selected {
 	font-weight: normal;
 	font-family: "CuprumRegular", "Arial", sans-serif;
 
-	margin-bottom: 20px;
+	margin-bottom: 22px;
+	padding-left: 4px;
 }
 
 .about-hammer-drills-content dd {

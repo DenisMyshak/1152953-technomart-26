@@ -123,12 +123,14 @@ var catalogPopup = document.querySelector('.product-added-card');
 var openPopup = document.querySelectorAll('.bookmarks-btn');
 var closeCardAdd = catalogPopup.querySelector('.close-btn');
 var continueBuy = document.querySelector('.continue-btn');
+var doOrder = catalogPopup.querySelector('.do-order-btn');
 
 	[].forEach.call(openPopup,function(evt){
     evt.addEventListener('click', function (e) {
     	e.preventDefault();
 
     	catalogPopup.classList.add('product-added-card-show');
+    	doOrder.focus();
     })
 });
 
