@@ -93,29 +93,23 @@ body {
 }
 
 .main-header-logo {
-	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 220px; 
 	height: 42px;
+
+	background-color: #ee3643;
+	 box-shadow: 0 5px 0 #b72f38;
 }
 
-.logo-hover, .logo-active {
-	display: none;
+.main-header-logo:hover {
+	background-color: #ca2c37;
 }
 
-.main-header-logo:hover .logo-link {
-	display: none;
-}
-
-
-.main-header-logo:hover .logo-hover {
-	display: block;
-}
-
-.main-header-logo:active .logo-hover {
-	display: none;
-}
-
-.main-header-logo:active .logo-active {
-	display: block;
+.main-header-logo:active {
+	background-color: #ba2732;
 }
 
 .user-actions-list {
@@ -1669,6 +1663,8 @@ a.services-item-active {
 }
 
 .footer-copyright p {
+	width: 227px;
+
 	margin: 0;
 	margin-right: 165px;
 
@@ -1756,8 +1752,28 @@ a.services-item-active {
 	width: 98px;
 }
 
+.communication-item:last-child p::before {
+	content: "";
+	display: block;
+	position: absolute;
+	right: 2px;
+	top: 9px;
+
+	width: 10px;
+	height: 1px;
+
+	background-color: #fff;
+}
+
 .creators-communication p {
+	position: relative;
+	width: 136px;
+
 	margin: 0;
+}
+
+.communication-item:last-child p {
+	width: 94px;
 }
 
 .creators-communication a {
@@ -1825,17 +1841,20 @@ a.services-item-active {
 	-webkit-box-direction: normal;
 	    -ms-flex-direction: column;
 	        flex-direction: column;
+	 position: relative;
+	 left: 2px;
 }
 
 .user-profile {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	justify-content: center;
 
 	width: 300px;
 	height: 45px;
 
-	margin-bottom: 10px;
+	margin-bottom: 8px;
 
 	background-color: #fff;
 }
@@ -1847,11 +1866,9 @@ a.services-item-active {
 	flex-wrap: wrap;
 }
 
-.user-profile:hover .user-icon {
-	background-image: url("../img/catalog-img/header-images/decorative-icons/icon-user-hover.svg");
-}
-
 .authorization-block {
+	width: 253px;
+
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -1859,7 +1876,35 @@ a.services-item-active {
 	display: flex;
 	align-items: center;
 
-	padding-left: 13px;
+	margin-right: 5px;
+}
+
+.user-name {
+	display: flex;
+	align-items: center;
+
+	padding-left: 36px;
+
+	width: 253px;
+	height: 45px;
+
+	color: #000;
+
+	font-size: 21px;
+	font-weight: normal;
+
+	background-image: url("../img/catalog-img/header-images/decorative-icons/icon-user.svg");
+	background-repeat: no-repeat;
+	background-position: 2px 50%;
+}
+
+.user-name:hover {
+	background-image: url("../img/catalog-img/header-images/decorative-icons/icon-user-hover.svg");
+}
+
+.user-name:active {
+	color: #cacaca;
+	background-image: url(../img/catalog-img/header-images/decorative-icons/icon-user.svg);
 }
 
 .deauthorization-block {
@@ -1871,45 +1916,12 @@ a.services-item-active {
 	align-items: center;
 }
 
-.user-list-item:active .user-icon {
-	background-image: url("../img/catalog-img/header-images/decorative-icons/icon-user.svg");
-}
-
-.user-profile:hover .logout-icon {
+.deauthorization-block:hover .logout-icon {
 	background-image: url("../img/catalog-img/header-images/decorative-icons/icon-logout-hover.svg");
 }
 
-.user-list-item:active .logout-icon {
+.deauthorization-block:active .logout-icon {
 	background-image: url("../img/catalog-img/header-images/decorative-icons/icon-logout.svg");
-}
-
-.user-name:active {
-	color: #cacaca;
-}
-
-.user-name {
-	display: block;
-
-	margin-right: 40px;
-	margin-left: 15px;
-
-	color: #000;
-
-	font-size: 21px;
-	font-weight: normal;
-}
-
-.user-icon {
-	display: block;
-	-ms-flex-item-align: center;
-	    -ms-grid-row-align: center;
-	    align-self: center;
-
-	width: 20px;
-	height: 20px;
-
-	background-image: url("../img/catalog-img/header-images/decorative-icons/icon-user.svg");
-	background-repeat: no-repeat;
 }
 
 .logout-icon {
@@ -1934,7 +1946,7 @@ a.services-item-active {
 
 .user-links-item {
 	margin-right: 15px;
-	margin-left: 16px;
+	margin-left: 18px;
 }
 
 .item-decor-circle {
@@ -1959,7 +1971,8 @@ a.services-item-active {
 }
 
 .user-links-item a {
-	color: #000;
+	color: #32425c;
+	text-decoration: underline;
 }
 
 .user-links-item a:hover {
