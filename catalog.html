@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Техномарт: Каталог</title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/mini-css.css">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -28,7 +28,7 @@
 					</li>
 
 					<li class="user-actions-item">
-						<a href="#" class="header-btn bookmark">Закладки:0</a>
+						<a href="#" class="header-btn bookmark">Закладки: 0</a>
 					</li>
 
 					<li class="user-actions-item">
@@ -46,9 +46,9 @@
 
 		<div class="main-header-short-inform">
 			<p class="short-market-desc">
-				<span>Интернет-магазин</span>
-				<span>строительных материалов</span>
-				и инструментов для ремонта
+				Интернет-магазин
+				строительных материалов
+				и&nbsp;инструментов для ремонта
 			</p>
 
 			<div class="address-block">
@@ -64,7 +64,9 @@
 						</li>
 
 						<li class="deauthorization-block user-list-item">
-							<a href="logout.html" class="logout-icon" aria-label="Выйти из аккаунта"></a>
+							<a href="logout.html" class="logout-icon" title="Выход из аккаунта">
+								<span class="visually-hidden">Выход из аккаунта</span>
+							</a>
 						</li>
 					</ul>
 				</div>
@@ -98,7 +100,9 @@
 			<h1 class="catalog-heading">Перфораторы</h1>
 			<ul class="breadcrumbs">
 				<li class="breadcrumbs-item breadcrumbs-decor-arrow">
-					<a href="index.html" title="На главную" class="breadcrumbs-home-link" aria-label="На главную"></a>
+					<a href="index.html" title="На главную" class="breadcrumbs-home-link">
+						<span class="visually-hidden">Ссылка на главную страницу</span>
+					</a>
 				</li>
 
 				<li class="breadcrumbs-item breadcrumbs-decor-arrow">
@@ -241,8 +245,16 @@
 							
 						<div class="sorting-btn-wrapper">
 							<ul class="sorting-btn">
-								<li class="sorting-btn-item"><a href="#" aria-label="Вверх"></a></li>
-								<li class="sorting-btn-item"><a href="#" aria-label="Вниз"></a></li>
+								<li class="sorting-btn-item">
+									<a href="#">
+										<span class="visually-hidden">Вверх</span>
+									</a>
+								</li>
+								<li class="sorting-btn-item">
+									<a href="#">
+										<span class="visually-hidden">Вниз</span>
+									</a>
+								</li>
 							</ul>
 						</div>
 					</div>
@@ -319,7 +331,7 @@
 							<a href="#">Перфоратор BOSCH BFG 2000</a>
 						</h3>
 
-						<div class="stock-price no-discounts-item">25500 P.</div>
+						<div class="stock-price no-discounts-item">12500 P.</div>
 					
 				</li>
 
@@ -367,7 +379,7 @@
 							<a href="#">Перфоратор BOSCH BFG 6000</a>
 						</h3>
 
-						<span class="price-through_line">32500 P.</span>
+						<span class="price-through_line">30500 P.</span>
 
 						<div class="stock-price">25500 P.</div>
 					
@@ -579,15 +591,21 @@
 
 				<ul class="footer-network-list">
 					<li class="footer-network-item vk">
-						<a href="https://vk.com/" aria-label="Наша страница во Вконтакте"></a>
+						<a href="https://vk.com/">
+							<span class="visually-hidden">Наша страничка во Вконтакте</span>
+						</a>
 					</li>
 
 					<li class="footer-network-item facebook">
-						<a href="https://uk-ua.facebook.com/" aria-label="Наша страница в Фейсбуке"></a>
+						<a href="https://uk-ua.facebook.com/">
+							<span class="visually-hidden">Наша страничка в Фейсбуке</span>
+						</a>
 					</li>
 
 					<li class="footer-network-item instagram">
-						<a href="https://www.instagram.com/?hl=ru" aria-label="Наша страница в Инстаграме"></a>
+						<a href="https://www.instagram.com/?hl=ru">
+							<span class="visually-hidden">Наша страничка в Инстаграме</span>
+						</a>
 					</li>
 				</ul>
 

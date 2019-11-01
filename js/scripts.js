@@ -1,6 +1,6 @@
 var loginBtn = document.querySelector('.write-us-btn');
 var popup = document.querySelector('.write-box');
-var linkAlternativeMap = document.querySelector(".map-link");
+var linkAlternativeMap = document.querySelector('.map-link');
 
 var close = popup.querySelector('.close-btn');
 var login = popup.querySelector('[name="nameUser"]');
@@ -164,51 +164,51 @@ var slaideTwo = document.querySelector('.slaide-2');
     evt.addEventListener('click', function (e) {
     	e.preventDefault();
 
-    	slaideOne.classList.add("slaide-hidden");
-    	slaideTwo.classList.remove("slaide-hidden");
+    	slaideOne.classList.add('slaide-hidden');
+    	slaideTwo.classList.remove('slaide-hidden');
     })
 });
 
 [].forEach.call(backBtnSlaider,function(evt){
-    evt.addEventListener("click", function (e) {
+    evt.addEventListener('click', function (e) {
     	e.preventDefault();
 
-    	slaideOne.classList.remove("slaide-hidden");
-    	slaideTwo.classList.add("slaide-hidden");
+    	slaideOne.classList.remove('slaide-hidden');
+    	slaideTwo.classList.add('slaide-hidden');
     })
 });
 
-var mapPopup = document.querySelector(".big-map");
-var mapOpen = document.querySelector(".mini-map-img");
-var closeMap = mapPopup.querySelector(".close-btn");
+var mapPopup = document.querySelector('.big-map');
+var mapOpen = document.querySelector('.mini-map-img');
+var closeMap = mapPopup.querySelector('.close-btn');
 
-mapOpen.addEventListener("click", function(evt) {
-	mapPopup.classList.add("big-map-show");
+mapOpen.addEventListener('click', function(evt) {
+	mapPopup.classList.add('big-map-show');
 });
 
 
-linkAlternativeMap.addEventListener("keydown", function(evt) {
+linkAlternativeMap.addEventListener('keydown', function(evt) {
 	if (evt.keyCode === 13) {
-		if (mapPopup.classList.contains("big-map-show")) {
+		if (mapPopup.classList.contains('big-map-show')) {
 			mapPopup = true;
 		} else {
-			mapPopup.classList.add("big-map-show");
+			mapPopup.classList.add('big-map-show');
 		}
 	}
 }); //- при нажатии на мини-карту с помощью Enter, открывалась большая карта
 
-closeMap.addEventListener("click", function(evt) {
+closeMap.addEventListener('click', function(evt) {
 	evt.preventDefault();
 
-	mapPopup.classList.remove("big-map-show");
+	mapPopup.classList.remove('big-map-show');
 });
 
-window.addEventListener("keydown", function(evt) {
+window.addEventListener('keydown', function(evt) {
 	if (evt.keyCode === 27) {
-		if (mapPopup.classList.contains("big-map-show")) {
+		if (mapPopup.classList.contains('big-map-show')) {
 			evt.preventDefault();
 
-			mapPopup.classList.remove("big-map-show");
+			mapPopup.classList.remove('big-map-show');
 		}
 	}
 });
